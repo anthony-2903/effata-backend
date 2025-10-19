@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { sequelize } from "./config/database.js";
-import pkg from "./models/init-models.js";  // 👈 IMPORTACIÓN CORREGIDA
-const initModels = pkg.initModels;          // 👈 FUNCIÓN CORRECTA
+import initModels from "./models/init-models.js";
+
 
 // Cargar variables de entorno
 dotenv.config();

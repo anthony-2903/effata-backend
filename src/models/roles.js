@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
+﻿import { DataTypes } from 'sequelize';
+export default function(sequelize, DataTypes) {
   return sequelize.define('roles', {
     id_rol: {
       autoIncrement: true,

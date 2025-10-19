@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-module.exports = function(sequelize, DataTypes) {
+﻿import { DataTypes } from 'sequelize';
+export default function(sequelize, DataTypes) {
   return sequelize.define('productos', {
     id_producto: {
       autoIncrement: true,
@@ -69,7 +69,7 @@ module.exports = function(sequelize, DataTypes) {
     fecha_registro: {
       type: DataTypes.DATE,
       allowNull: true,
-      defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
+      defaultValue: DataTypes.NOW
     }
   }, {
     sequelize,
